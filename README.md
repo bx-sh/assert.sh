@@ -50,3 +50,28 @@ On a failure, your shell will `exit 1` (_so you'll only want to use this in test
 > - Run `assert` and `refute`!
 
 ---
+
+### Usage in `@spec`
+
+```sh
+import @assert
+
+equals() {
+  [ "$1" = "$2" ]
+}
+
+@spec.test_function_return() {
+  assert equals 1 1
+  refute equals 1 2
+}
+
+@spec.test_existence_of_files() {
+  assert [ -f some-file.txt ]
+  refute [ -f another-file.txt ]
+}
+
+@spec.test_that_some_commands_exist() {
+  assert this command should work &>/dev/null
+  assert this command should fail &>/dev/null
+}
+```
