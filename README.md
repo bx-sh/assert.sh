@@ -71,7 +71,7 @@ equals() {
 }
 
 @spec.test_that_some_commands_exist() {
-  assert this command should work &>/dev/null
-  assert this command should fail &>/dev/null
+  assert some-command this should work &>/dev/null
+  assert some-command this should fail &>/dev/null
 }
 ```
