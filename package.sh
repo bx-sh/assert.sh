@@ -1,3 +1,3 @@
-name @assert
+name assert
 
 description "assert & refute"
