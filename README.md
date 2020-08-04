@@ -16,7 +16,7 @@ Expected to fail, but succeeded: $ [ -f i-exist ]
 ```
 
 > Don't use these if you don't want to `exit 1` on a failure.
-> 
+>
 > Instead, use a regular built-in like `test`.
 
 ---
@@ -30,15 +30,19 @@ On a failure, your shell will `exit 1` (_so you'll only want to use this in test
 > #### Installation with bx
 >
 > Install globally:
+>
 > ```
 > bx install assert
 > ```
+>
 > Or add to project dependencies:
+>
 > ```
 > bx add assert --dev
 > ```
 >
 > To use in your specs:
+>
 > ```sh
 > import @assert
 > ```
@@ -72,6 +76,6 @@ equals() {
 
 @spec.test_that_some_commands_exist() {
   assert some-command this should work
-  assert some-command this should fail
+  refute some-command this should fail
 }
 ```
