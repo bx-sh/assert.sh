@@ -29,12 +29,6 @@ Expected to fail, but succeeded: $ [ -f i-exist ]
 
 ---
 
-Intended for use in BASH testing frameworks.
-
-On a failure, your shell will `exit 1` (_so you'll only want to use this in tests_)
-
----
-
 ### Example Usage in `@spec`
 
 ```sh
