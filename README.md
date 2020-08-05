@@ -4,6 +4,15 @@ Provides `assert` and `refute` functions.
 
 ---
 
+Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.1.tar.gz)
+
+```sh
+source "assert.sh"
+source "refute.sh"
+```
+
+---
+
 ```sh
 source "assert.sh"
 source "refute.sh"
@@ -14,6 +23,8 @@ Expected to succeed, but failed: $ [ -f somefile ]
 : "$( refute [ -f i-exist ] )"
 Expected to fail, but succeeded: $ [ -f i-exist ]
 ```
+
+---
 
 > Don't use these if you don't want to `exit 1` on a failure.
 >
@@ -27,16 +38,7 @@ On a failure, your shell will `exit 1` (_so you'll only want to use this in test
 
 ---
 
-Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.1.tar.gz)
-
-```sh
-source "assert.sh"
-source "refute.sh"
-```
-
----
-
-### Usage in `@spec`
+### Example Usage in `@spec`
 
 ```sh
 import @assert
