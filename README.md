@@ -14,9 +14,6 @@ source "refute.sh"
 ---
 
 ```sh
-source "assert.sh"
-source "refute.sh"
-
 : "$( assert [ -f somefile ] )"
 Expected to succeed, but failed: $ [ -f somefile ]
 
