@@ -27,31 +27,12 @@ On a failure, your shell will `exit 1` (_so you'll only want to use this in test
 
 ---
 
-> #### Installation with bx
->
-> Install globally:
->
-> ```
-> bx install assert
-> ```
->
-> Or add to project dependencies:
->
-> ```
-> bx add assert --dev
-> ```
->
-> To use in your specs:
->
-> ```sh
-> import @assert
-> ```
->
-> #### Manual installation
->
-> - [Download .zip](https://github.com/bx-sh/assert.sh/archive/v0.2.0.zip)
-> - Source `"assert.sh"` and `"refute.sh"`
-> - Run `assert` and `refute`
+Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.1.tar.gz)
+
+```sh
+source "assert.sh"
+source "refute.sh"
+```
 
 ---
 
