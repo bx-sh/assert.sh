@@ -7,4 +7,5 @@ refute() {
     echo "Expected to fail, but succeeded: \$ $command $@" >&2
     exit 1
   fi
+  return 0
 }

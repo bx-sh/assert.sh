@@ -7,4 +7,5 @@ assert() {
     echo "Expected to succeed, but failed: \$ $command $@" >&2
     exit 1
   fi
+  return 0
 }
