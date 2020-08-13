@@ -17,9 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: bx-sh/setup-bx@master
-      - run: echo "The path is $PATH"
+      - run: echo "::add-path::packages/bin"
         shell: bash
-      - run: ./packages/bin/bx spec
+      - run: bx spec
         shell: bash
         env:
           VERBOSE: true
