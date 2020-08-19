@@ -1,4 +1,4 @@
-import @expect/all
+import @expect
 import @assert
 
 @spec.can_use_assert() {

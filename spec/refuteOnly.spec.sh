@@ -1,4 +1,4 @@
-import @expect/all
+import @expect
 import @assert/refute
 
 @spec.cannot_use_assert() {
