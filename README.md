@@ -2,10 +2,6 @@
 
 # ☑️ `assert` & `refute`
 
-Provides `assert` and `refute` functions.
-
----
-
 Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.1.tar.gz)
 
 ```sh
@@ -15,43 +11,63 @@ source "refute.sh"
 
 ---
 
-```sh
-: "$( assert [ -f somefile ] )"
-Expected to succeed, but failed: $ [ -f somefile ]
+`assert` and `refute` are tiny building blocks for shell testing.
 
-: "$( refute [ -f i-exist ] )"
-Expected to fail, but succeeded: $ [ -f i-exist ]
+
+```sh
+assert [ -f somefile ]
+# Expected to succeed, but failed: $ [ -f somefile ]
+
+refute [ -f i-exist ]
+# Expected to fail, but succeeded: $ [ -f i-exist ]
 ```
 
 ---
 
-> Don't use these if you don't want to `exit 1` on a failure.
->
-> Instead, use a regular built-in like `test`.
+### Related Projects
+
+ - 🧐 [`expect.sh`](https://expectations.sh) for `expect { ... } toEqual 42` style assertions
+ - 🚀 [`run-command.sh`](https://run-command.pages.sh) for `run ls && echo "$STDOUT"` helper function
+ - 🔬 [`spec.sh`](https://specs.sh) for a lovely shell specification testing framework
 
 ---
 
-### Example Usage in `@spec`
+### Return or Exit
+
+The default behavior of a failing `assert` is to `exit 1`.
 
 ```sh
-import @assert
+assert [ -f somefile ] # <--- this will exit 1 on failure
+```
 
-equals() {
-  [ "$1" = "$2" ]
-}
+The default behavior of a failing `refute` is to `exit 1`.  
 
-@spec.test_function_return() {
-  assert equals 1 1
-  refute equals 1 2
-}
+```sh
+refute [ -f i-exist ] # <--- this will exit 1 on failure
+```
 
-@spec.test_existence_of_files() {
-  assert [ -f some-file.txt ]
-  refute [ -f another-file.txt ]
-}
+#### Why Exit?
 
-@spec.test_that_some_commands_exist() {
-  assert some-command this should work
-  refute some-command this should fail
+If you want to `return 1` for a failing assertion, BASH has you covered:
+
+```sh
+testFileExists() {
+  [ -f "$filename" ] # <--- this will return 0 or 1
 }
 ```
+
+Or:
+
+```sh
+testFileExists() {
+  test -f "$filename" # <--- this will return 0 or 1
+}
+```
+
+`assert` and `refute` exist to provide an alternative which will `exit`
+
+#### Test Framework Compatibility
+
+- [Bats](https://github.com/bats-core/bats-core)
+- [shUnit2](https://github.com/kward/shunit2/)
+- [roundup](http://bmizerany.github.io/roundup/roundup.1.html)
