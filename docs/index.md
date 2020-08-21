@@ -1,6 +1,12 @@
 # `assert` & `refute`
 
-Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.1.tar.gz)
+Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.2.tar.gz) by clicking one of the download links above or:
+
+```sh
+curl -o- https://expectations.sh/installer.sh | bash
+```
+
+Source the downloaded `assert.sh` and/or `refute.sh` scripts to use in your tests:
 
 ```sh
 source "assert.sh"
@@ -19,14 +25,6 @@ assert [ -f somefile ]
 refute [ -f i-exist ]
 # Expected to fail, but succeeded: $ [ -f i-exist ]
 ```
-
----
-
-### Related Projects
-
- - 🧐 [`expect.sh`](https://expectations.sh) for `expect { ... } toEqual 42` style assertions
- - 🚀 [`run-command.sh`](https://run-command.pages.sh) for `run ls && echo "$STDOUT"` helper function
- - 🔬 [`spec.sh`](https://specs.sh) for a lovely shell specification testing framework
 
 ---
 
@@ -63,6 +61,15 @@ testFileExists() {
 ```
 
 `assert` and `refute` exist to provide an alternative which will `exit`
+
+---
+
+### Related Projects
+
+ - 🧐 [`expect.sh`](https://expectations.sh) for `expect { ... } toEqual 42` style assertions
+ - 🚀 [`run-command.sh`](https://run-command.pages.sh) for `run ls && echo "$STDOUT"` helper function
+ - 🔬 [`spec.sh`](https://specs.sh) for a lovely shell specification testing framework
+
 
 #### Test Framework Compatibility
 
