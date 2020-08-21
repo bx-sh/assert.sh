@@ -67,7 +67,7 @@ testFileExists() {
 ### Related Projects
 
  - 🧐 [`expect.sh`](https://expectations.sh) for `expect { ... } toEqual 42` style assertions
- - 🚀 [`run-command.sh`](https://run-command.pages.sh) for `run ls && echo "$STDOUT"` helper function
+ - 🚀 [`run-command.sh`](https://run.assert.sh) for `run ls && echo "$STDOUT"` helper function
  - 🔬 [`spec.sh`](https://specs.sh) for a lovely shell specification testing framework
 
 
