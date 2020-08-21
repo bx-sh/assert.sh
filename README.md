@@ -1,4 +1,7 @@
-[![GitHub Actions](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fbx-sh%2Fassert.sh%2Fbadge&label=build&logo=none)](https://actions-badge.atrox.dev/bx-sh/assert.sh/goto)
+[![Mac (BASH 3.2)](https://github.com/bx-sh/assert.sh/workflows/Mac%20(BASH%203.2)/badge.svg)](https://github.com/bx-sh/assert.sh/actions?query=workflow%3A%22Mac+%28BASH+3.2%29%22) [![BASH 4.3](https://github.com/bx-sh/assert.sh/workflows/BASH%204.3/badge.svg)](https://github.com/bx-sh/assert.sh/actions?query=workflow%3A%22BASH+4.3%22) [![BASH 4.4](https://github.com/bx-sh/assert.sh/workflows/BASH%204.4/badge.svg)](https://github.com/bx-sh/assert.sh/actions?query=workflow%3A%22BASH+4.4%22) [![BASH 5.0](https://github.com/bx-sh/assert.sh/workflows/BASH%205.0/badge.svg)](https://github.com/bx-sh/assert.sh/actions?query=workflow%3A%22BASH+5.0%22)  
+[![Mac (Installer)](https://github.com/bx-sh/assert.sh/workflows/Mac%20(Installer)/badge.svg)](https://github.com/bx-sh/assert.sh/actions?query=workflow%3A%22Mac+%28Installer%29%22) [![Linux (Installer)](https://github.com/bx-sh/assert.sh/workflows/Linux%20(Installer)/badge.svg)](https://github.com/bx-sh/assert.sh/actions?query=workflow%3A%22Linux+%28Installer%29%22)
+
+---
 
 # ☑️ `assert` & `refute`
 
