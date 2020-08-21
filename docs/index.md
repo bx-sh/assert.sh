@@ -3,7 +3,7 @@
 Download the [latest version](https://github.com/bx-sh/assert.sh/archive/v0.2.2.tar.gz) by clicking one of the download links above or:
 
 ```sh
-curl -o- https://expectations.sh/installer.sh | bash
+curl -o- https://assert.sh/installer.sh | bash
 ```
 
 Source the downloaded `assert.sh` and/or `refute.sh` scripts to use in your tests:
